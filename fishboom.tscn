@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccji3gba0vsyj"]
+
+[ext_resource type="PackedScene" uid="uid://b0a7mgqct0ih5" path="res://models/kenney/kenney food/fish.glb" id="1_0u1ck"]
+[ext_resource type="PackedScene" uid="uid://cvligxl0jeaay" path="res://models/kenney/kenney food/fishBones.glb" id="2_7ytod"]
+
+[node name="Fishboom" type="Node3D"]
+
+[node name="fish2" parent="." instance=ExtResource("1_0u1ck")]
+
+[node name="fishBones2" parent="." instance=ExtResource("2_7ytod")]

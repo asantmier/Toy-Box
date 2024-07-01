@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cag4g727ej5by"]
+
+[ext_resource type="PackedScene" uid="uid://bxov0qsviqm4t" path="res://fishing_rod.glb" id="1_ha51w"]
+[ext_resource type="Material" uid="uid://budarej8v60bv" path="res://fishingrid.tres" id="2_7eyky"]
+
+[node name="fishing_rod" instance=ExtResource("1_ha51w")]
+
+[node name="fishing_rod_base" parent="." index="0"]
+transform = Transform3D(-5.73206e-15, -1, -4.37114e-08, 1.31134e-07, -4.37114e-08, 1, -1, 0, 1.31134e-07, 0, 0, 0.00271118)
+surface_material_override/0 = ExtResource("2_7eyky")
+
+[node name="fishing_rod_end" parent="fishing_rod_base" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.59885, 0, -0.0024152)
+surface_material_override/0 = ExtResource("2_7eyky")
+
+[node name="fishing_rod_mid" parent="fishing_rod_base" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.597452, 0, -0.00254175)
+surface_material_override/0 = ExtResource("2_7eyky")

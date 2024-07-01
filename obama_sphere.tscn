@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://dnbhcs4h33oje"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://bbep6uf8mtv5b" path="res://physics/bouncy_ball.tres" id="1_ghovh"]
+[ext_resource type="Texture2D" uid="uid://c41ibimnjv1ox" path="res://models/stupid/obamna3.png" id="2_1o27a"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_6c6kn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cgmsy"]
+albedo_texture = ExtResource("2_1o27a")
+uv1_triplanar_sharpness = 4.2871
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_gna2c"]
+radius = 0.263386
+
+[node name="Obama Sphere" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+collision_layer = 18
+collision_mask = 19
+physics_material_override = ExtResource("1_ghovh")
+continuous_cd = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.52393, 0, 0, 0, 0.52393, 0, 0, 0, 0.52393, 0, 0, 0)
+mesh = SubResource("SphereMesh_6c6kn")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_cgmsy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_gna2c")

@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://6jjoefacnur6"]
+
+[ext_resource type="Script" path="res://Basketball Game.gd" id="1_je20t"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_cx8oj"]
+height = 0.0550582
+
+[node name="Basketball Hoop" type="CSGCylinder3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.54794, 1.34822, -5.83485)
+use_collision = true
+radius = 0.102564
+height = 3.61763
+
+[node name="Basketball Game" type="CSGCombiner3D" parent="." node_paths=PackedStringArray("label")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000273705, 1.44561, 0.164646)
+script = ExtResource("1_je20t")
+label = NodePath("CSGBox3D/Label3D")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Basketball Game"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.235962, 0)
+size = Vector3(2.24634, 1.59473, 0.0478516)
+
+[node name="Label3D" type="Label3D" parent="Basketball Game/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.119662, 0.0294056)
+text = "0"
+font_size = 205
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="Basketball Game"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.439614, 0.587573)
+inner_radius = 0.531095
+outer_radius = 0.613321
+
+[node name="Area3D" type="Area3D" parent="Basketball Game/CSGTorus3D"]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Basketball Game/CSGTorus3D/Area3D"]
+shape = SubResource("CylinderShape3D_cx8oj")
+
+[connection signal="body_entered" from="Basketball Game/CSGTorus3D/Area3D" to="Basketball Game" method="_on_area_body_entered"]
