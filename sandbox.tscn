@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://cbdlj4gihx6pc"]
+[gd_scene load_steps=55 format=3 uid="uid://cbdlj4gihx6pc"]
 
 [ext_resource type="Texture2D" uid="uid://h1rhs1v605xv" path="res://textures/Grass004_1K-PNG_Color.png" id="1_65fmy"]
 [ext_resource type="Texture2D" uid="uid://b465crk5op2bo" path="res://kloofendal_48d_partly_cloudy_puresky_4k.exr" id="1_ip0dl"]
@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://du5cfepkw7oak" path="res://models/kenney/kenney food/cornDog.glb" id="8_a8ww0"]
 [ext_resource type="PackedScene" uid="uid://ctiiv6l7dnmto" path="res://models/kenney/kenney food/donutSprinkles.glb" id="9_m1got"]
 [ext_resource type="PackedScene" uid="uid://cngrp6b4o5j2e" path="res://models/kenney/kenney food/loafBaguette.glb" id="10_xkb68"]
-[ext_resource type="PackedScene" uid="uid://bxe508w1cb6y1" path="res://models/kenney/kenney food/loaf.glb" id="12_8des3"]
+[ext_resource type="PackedScene" uid="uid://dhsswgx08h65v" path="res://gameplay/interactables/loaf_2_phys.tscn" id="12_n6sf2"]
 [ext_resource type="Material" uid="uid://dijorkkcmjfgg" path="res://textures/kenney prototype/Orange/orange_5.tres" id="15_jc6wi"]
 [ext_resource type="PackedScene" uid="uid://brumhs4qywdb3" path="res://models/kenney/kenney food/waffle.glb" id="17_0rhe1"]
 [ext_resource type="PackedScene" uid="uid://6jjoefacnur6" path="res://basketball_hoop.tscn" id="18_14nh4"]
@@ -26,12 +26,21 @@
 [ext_resource type="Material" uid="uid://jonnncdanelx" path="res://textures/kenney prototype/Red/red_6.tres" id="23_1eclu"]
 [ext_resource type="Script" path="res://Button.gd" id="23_balvj"]
 [ext_resource type="Script" path="res://ForceArea.gd" id="23_widdw"]
-[ext_resource type="PackedScene" uid="uid://dnbhcs4h33oje" path="res://obama_sphere.tscn" id="24_c60xb"]
+[ext_resource type="PackedScene" uid="uid://dnbhcs4h33oje" path="res://models/stupid/obama_sphere.tscn" id="24_c60xb"]
 [ext_resource type="ArrayMesh" uid="uid://drqejivoulew2" path="res://models/basemesh/pallet_01.obj" id="28_tid35"]
 [ext_resource type="Material" uid="uid://dtiijyjh6dwr2" path="res://textures/kenney prototype/Orange/orange_10.tres" id="29_5712b"]
+[ext_resource type="PackedScene" uid="uid://brc136noysgqq" path="res://models/kenney/kenney food/mortar.glb" id="30_et4rj"]
 [ext_resource type="ArrayMesh" uid="uid://dpe1lx4lpw7wr" path="res://models/basemesh/oil_barrel.obj" id="30_fekan"]
 [ext_resource type="Material" uid="uid://cc5s76kpsvdn0" path="res://textures/kenney prototype/Green/green_2.tres" id="31_275re"]
+[ext_resource type="Script" path="res://Breakable.gd" id="31_338qm"]
 [ext_resource type="PackedScene" uid="uid://cag4g727ej5by" path="res://fishing_rod.tscn" id="32_0xdgd"]
+[ext_resource type="PackedScene" uid="uid://d0ea3y0ur8au5" path="res://models/kenney/kenney furniture/bathtub.glb" id="36_pm5iu"]
+[ext_resource type="PackedScene" uid="uid://sy5lxgsx0nft" path="res://spin_cake.tscn" id="38_p6ad2"]
+[ext_resource type="PackedScene" uid="uid://d05e26570vcr0" path="res://holotest.tscn" id="39_todbf"]
+[ext_resource type="PackedScene" uid="uid://ba5igqi0nykti" path="res://gameplay/zombies/zombie_guy_master.tscn" id="39_uet2j"]
+[ext_resource type="PackedScene" uid="uid://dwo1ugifjxhv2" path="res://area_spawner.tscn" id="40_c0x4s"]
+[ext_resource type="MeshLibrary" uid="uid://cdambqq241ocl" path="res://kenny building library.meshlib" id="40_l5dsq"]
+[ext_resource type="PackedScene" uid="uid://cp8283iyumdyf" path="res://gameplay/guns/decal.tscn" id="41_26qpi"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_sh37x"]
 panorama = ExtResource("1_ip0dl")
@@ -47,9 +56,6 @@ glow_enabled = true
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_swh38"]
 radius = 0.118463
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_xpu45"]
-size = Vector3(0.595703, 0.464813, 0.386719)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pworv"]
 size = Vector3(1.20898, 0.190308, 1.20117)
@@ -68,6 +74,9 @@ uv1_triplanar = true
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_a4cf0"]
 height = 0.108281
 radius = 0.111598
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_egyct"]
+size = Vector3(0.400391, 0.439697, 0.468506)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_5jqwf"]
 
@@ -131,18 +140,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.86638, 0.868229, -4.07544)
 [node name="loafBaguette2" parent="Level/Interactables" instance=ExtResource("10_xkb68")]
 transform = Transform3D(0.531709, 0, -0.846927, 0, 1, 0, 0.846927, 0, 0.531709, -3.30731, 0.868229, -4.00403)
 
-[node name="RigidBody3D" type="RigidBody3D" parent="Level/Interactables"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.80257, 4.76837e-07, -2.39151)
-collision_layer = 2
-collision_mask = 3
-can_sleep = false
-continuous_cd = true
-
-[node name="loaf2" parent="Level/Interactables/RigidBody3D" instance=ExtResource("12_8des3")]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/Interactables/RigidBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.227493, 0)
-shape = SubResource("BoxShape3D_xpu45")
+[node name="Loaf2 Phys" parent="Level/Interactables" instance=ExtResource("12_n6sf2")]
 
 [node name="PhysPallet" type="RigidBody3D" parent="Level/Interactables"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.51088, 0.0157793, 0.911766)
@@ -197,9 +195,10 @@ transform = Transform3D(0.369927, 0, -1.4567, 0, 1.50294, 0, 1.4567, 0, 0.369927
 transform = Transform3D(-0.719716, -0.289363, -0.631093, 0, 0.909003, -0.416789, 0.694269, -0.299969, -0.654224, -4.78026, 0.379934, -2.26191)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Level"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 13.6339)
 use_collision = true
-size = Vector3(30, 1, 30)
+collision_layer = 4097
+size = Vector3(30, 1, 57.2677)
 material = SubResource("StandardMaterial3D_4rqpg")
 
 [node name="Tree_1" parent="Level" instance=ExtResource("2_gks5d")]
@@ -226,12 +225,14 @@ material = ExtResource("4_y0kui")
 [node name="CSGBox3D3" type="CSGBox3D" parent="Level"]
 transform = Transform3D(1, 0, 0, 0, 0.873925, -0.486061, 0, 0.486061, 0.873925, 1.67052, 0.381839, -5.21347)
 use_collision = true
+collision_layer = 4097
 size = Vector3(4, 1, 11)
 material = ExtResource("5_4ndyd")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="Level"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 3, -12.2718)
 use_collision = true
+collision_layer = 4097
 size = Vector3(12, 1, 5)
 material = ExtResource("5_4ndyd")
 
@@ -249,13 +250,14 @@ material = ExtResource("15_jc6wi")
 
 [node name="Basketball Hoop" parent="Level" instance=ExtResource("18_14nh4")]
 
-[node name="Spawner" type="CSGBox3D" parent="Level"]
+[node name="Spawner" type="CSGBox3D" parent="Level" node_paths=PackedStringArray("target")]
 transform = Transform3D(-0.413136, 0, 0.910669, 0, 1, 0, -0.910669, 0, -0.413136, -7.6664, 0.0273438, -1.06082)
 use_collision = true
 size = Vector3(1, 0.0644531, 1.25391)
 material = ExtResource("19_majde")
 script = ExtResource("20_t8p5b")
 item = ExtResource("24_c60xb")
+target = NodePath("CSGCylinder3D/Target")
 metadata/_edit_group_ = true
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="Level/Spawner"]
@@ -290,6 +292,17 @@ material = ExtResource("23_1eclu")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Level/Spawner/Button"]
 shape = SubResource("CylinderShape3D_a4cf0")
 
+[node name="Breakable" type="Area3D" parent="Level"]
+transform = Transform3D(3.00938, 0, 0, 0, 3.00938, 0, 0, 0, 3.00938, -2.76663, 0, 2.97885)
+collision_layer = 512
+collision_mask = 0
+script = ExtResource("31_338qm")
+
+[node name="mortar2" parent="Level/Breakable" instance=ExtResource("30_et4rj")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/Breakable"]
+shape = SubResource("BoxShape3D_egyct")
+
 [node name="Character" parent="." groups=["Player"] instance=ExtResource("3_cq2qd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
@@ -308,5 +321,38 @@ surface_material_override/0 = SubResource("StandardMaterial3D_ji76k")
 
 [node name="fishing_rod" parent="." instance=ExtResource("32_0xdgd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="bathtub" parent="." instance=ExtResource("36_pm5iu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.392074, 0, 4.73474)
+
+[node name="spin cake" parent="." instance=ExtResource("38_p6ad2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.61939, 2.38419e-07, 1.07094)
+
+[node name="bathtub2" parent="." instance=ExtResource("39_todbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.250483, 0, 6)
+
+[node name="ZombieGuyMaster" parent="." instance=ExtResource("39_uet2j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.68785, 0, -0.768301)
+
+[node name="ZombieGuyMaster2" parent="." instance=ExtResource("39_uet2j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2516, -9.53674e-07, 2.35149)
+
+[node name="ZombieGuyMaster3" parent="." instance=ExtResource("39_uet2j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.91088, -9.53674e-07, -5.53013)
+
+[node name="AreaSpawner" parent="." instance=ExtResource("40_c0x4s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.59172, 9.53674e-07, 4.11879)
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("40_l5dsq")
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(1, 7, 1048641, 2, 7, 1441862, 65533, 7, 1441862, 3, 7, 1048631, 65532, 7, 655415, 3, 8, 655430, 3, 9, 655430, 3, 10, 655430, 65532, 8, 655430, 65532, 9, 655430, 65532, 10, 655430, 0, 7, 1048633, 65535, 7, 1048643)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="Decal" parent="." instance=ExtResource("41_26qpi")]
+transform = Transform3D(1, 0, 0, 0, -0.00675425, 0.999977, 0, -0.999977, -0.00675425, 7.00143, 4.00249, -14.2216)
+size = Vector3(0.3, 0.3, 0.3)
 
 [connection signal="pressed" from="Level/Spawner/Button" to="Level/Spawner" method="spawn"]

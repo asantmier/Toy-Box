@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwo1ugifjxhv2"]
+
+[ext_resource type="Script" path="res://AreaSpawner.gd" id="1_g5who"]
+[ext_resource type="PackedScene" uid="uid://ba5igqi0nykti" path="res://gameplay/zombies/zombie_guy_master.tscn" id="2_qe58c"]
+[ext_resource type="PackedScene" uid="uid://cgtgdkpvatfer" path="res://models/kenney/kenny graveyard/gravestone-bevel.glb" id="3_w4q2s"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g3hai"]
+size = Vector3(3.1272, 1, 3.35571)
+
+[node name="AreaSpawner" type="Node3D"]
+script = ExtResource("1_g5who")
+item = ExtResource("2_qe58c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_g3hai")
+
+[node name="gravestone-bevel2" parent="." instance=ExtResource("3_w4q2s")]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

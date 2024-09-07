@@ -1,0 +1,292 @@
+[gd_scene load_steps=80 format=3 uid="uid://momtbiyfj2y1"]
+
+[ext_resource type="PackedScene" uid="uid://sbin46wea24d" path="res://models/kenney/kenney building/barricade-doorway-a.glb" id="1_u8ypq"]
+[ext_resource type="PackedScene" uid="uid://chf1lll5ed6el" path="res://models/kenney/kenney building/barricade-doorway-b.glb" id="2_lobjo"]
+[ext_resource type="PackedScene" uid="uid://cfe5hwhgcs5n" path="res://models/kenney/kenney building/barricade-doorway-c.glb" id="3_0i0im"]
+[ext_resource type="PackedScene" uid="uid://8aksuqvjjqbs" path="res://models/kenney/kenney building/barricade-window-a.glb" id="4_dard1"]
+[ext_resource type="PackedScene" uid="uid://db0a8i5yfeisk" path="res://models/kenney/kenney building/barricade-window-b.glb" id="5_nld7a"]
+[ext_resource type="PackedScene" uid="uid://bb5qjhuhwbac" path="res://models/kenney/kenney building/barricade-window-c.glb" id="6_gertl"]
+[ext_resource type="PackedScene" uid="uid://cqueeg474j0tj" path="res://models/kenney/kenney building/border-corner-diagonal.glb" id="7_v83jg"]
+[ext_resource type="PackedScene" uid="uid://co8bw5q4uxnto" path="res://models/kenney/kenney building/border-corner-round.glb" id="8_id254"]
+[ext_resource type="PackedScene" uid="uid://dw5ll6auodld2" path="res://models/kenney/kenney building/border-corner-small.glb" id="9_05i5n"]
+[ext_resource type="PackedScene" uid="uid://1sdw7b0dvjc1" path="res://models/kenney/kenney building/border-corner.glb" id="10_t0724"]
+[ext_resource type="PackedScene" uid="uid://bbnijs8mg5qx7" path="res://models/kenney/kenney building/border-high-corner-diagonal.glb" id="11_76ook"]
+[ext_resource type="PackedScene" uid="uid://c7qy1ddourmck" path="res://models/kenney/kenney building/border-high-corner-round.glb" id="12_rsceo"]
+[ext_resource type="PackedScene" uid="uid://djf7v1fiy5x8t" path="res://models/kenney/kenney building/border-high-corner-small.glb" id="13_dyyc3"]
+[ext_resource type="PackedScene" uid="uid://docf6e8oytn8t" path="res://models/kenney/kenney building/border-high-corner.glb" id="14_jph57"]
+[ext_resource type="PackedScene" uid="uid://fasblf3ckt1" path="res://models/kenney/kenney building/border-high.glb" id="15_poh84"]
+[ext_resource type="PackedScene" uid="uid://cf2cmslngo6d1" path="res://models/kenney/kenney building/border.glb" id="16_4qylr"]
+[ext_resource type="PackedScene" uid="uid://v85prj4p36su" path="res://models/kenney/kenney building/column-thin.glb" id="17_oh36c"]
+[ext_resource type="PackedScene" uid="uid://b4t2iwr3p7s2q" path="res://models/kenney/kenney building/column-wide.glb" id="18_kxy0l"]
+[ext_resource type="PackedScene" uid="uid://dy5foju0qy6r7" path="res://models/kenney/kenney building/column.glb" id="19_iemsi"]
+[ext_resource type="PackedScene" uid="uid://b4r8a2uhiraha" path="res://models/kenney/kenney building/detail-pipe.glb" id="20_oxjne"]
+[ext_resource type="PackedScene" uid="uid://dfdnr21jqeist" path="res://models/kenney/kenney building/door-rotate-round-a.glb" id="21_omy77"]
+[ext_resource type="PackedScene" uid="uid://v5m7osyd4ycv" path="res://models/kenney/kenney building/door-rotate-round-b.glb" id="22_xusor"]
+[ext_resource type="PackedScene" uid="uid://ce64q4iaajlsk" path="res://models/kenney/kenney building/door-rotate-round-c.glb" id="23_ix0bk"]
+[ext_resource type="PackedScene" uid="uid://ct300w01s6o8b" path="res://models/kenney/kenney building/door-rotate-round-d.glb" id="24_u25tg"]
+[ext_resource type="PackedScene" uid="uid://321gdbd7ft4r" path="res://models/kenney/kenney building/door-rotate-square-a.glb" id="25_f44ml"]
+[ext_resource type="PackedScene" uid="uid://cx5ibjw5ulqch" path="res://models/kenney/kenney building/door-rotate-square-b.glb" id="26_s8g7b"]
+[ext_resource type="PackedScene" uid="uid://bfpsjd2nhc146" path="res://models/kenney/kenney building/door-rotate-square-c.glb" id="27_5mdoi"]
+[ext_resource type="PackedScene" uid="uid://bjxkmfpxcnovj" path="res://models/kenney/kenney building/door-rotate-square-d.glb" id="28_rg5a7"]
+[ext_resource type="PackedScene" uid="uid://b6md8styhw3oj" path="res://models/kenney/kenney building/floor-corner-diagonal.glb" id="29_i5s3n"]
+[ext_resource type="PackedScene" uid="uid://twf6wrnhhyai" path="res://models/kenney/kenney building/floor-corner-round.glb" id="30_sv24o"]
+[ext_resource type="PackedScene" uid="uid://btjpgcxmil4q" path="res://models/kenney/kenney building/floor-half.glb" id="31_30yov"]
+[ext_resource type="PackedScene" uid="uid://btxjwa2wsml37" path="res://models/kenney/kenney building/floor-quarter.glb" id="32_ok55s"]
+[ext_resource type="PackedScene" uid="uid://b11xtfqsji7s1" path="res://models/kenney/kenney building/floor.glb" id="33_81xr3"]
+[ext_resource type="PackedScene" uid="uid://b3g6ytfjao3tg" path="res://models/kenney/kenney building/gutter-vertical-bottom.glb" id="34_p760k"]
+[ext_resource type="PackedScene" uid="uid://b0v5s0qqpalvr" path="res://models/kenney/kenney building/gutter-vertical-short.glb" id="35_ru4q0"]
+[ext_resource type="PackedScene" uid="uid://c1mv1jsdab6vi" path="res://models/kenney/kenney building/gutter-vertical-top.glb" id="36_wlagn"]
+[ext_resource type="PackedScene" uid="uid://do2qigt7kda3e" path="res://models/kenney/kenney building/gutter-vertical-wall.glb" id="37_pos0j"]
+[ext_resource type="PackedScene" uid="uid://4usasuarj1vb" path="res://models/kenney/kenney building/gutter-vertical.glb" id="38_onotx"]
+[ext_resource type="PackedScene" uid="uid://dck7h5ukr0ehn" path="res://models/kenney/kenney building/plating-detailed-wide.glb" id="39_yhpra"]
+[ext_resource type="PackedScene" uid="uid://ck02wyayerdxw" path="res://models/kenney/kenney building/plating-detailed.glb" id="40_v2325"]
+[ext_resource type="PackedScene" uid="uid://brxnrkedfgknc" path="res://models/kenney/kenney building/plating-wide.glb" id="41_e0kqw"]
+[ext_resource type="PackedScene" uid="uid://br2lc3eo8okfr" path="res://models/kenney/kenney building/plating.glb" id="42_5olya"]
+[ext_resource type="PackedScene" uid="uid://bjhjhv0euvmue" path="res://models/kenney/kenney building/roof-flat-center.glb" id="43_odjpp"]
+[ext_resource type="PackedScene" uid="uid://bpt244lwa32q6" path="res://models/kenney/kenney building/roof-flat-corner-inner.glb" id="44_xylfm"]
+[ext_resource type="PackedScene" uid="uid://vee5lvs0sxqq" path="res://models/kenney/kenney building/roof-flat-corner.glb" id="45_85k7k"]
+[ext_resource type="PackedScene" uid="uid://d3524lnjovf8c" path="res://models/kenney/kenney building/roof-flat-patch-large.glb" id="46_d7ltw"]
+[ext_resource type="PackedScene" uid="uid://frhpp3dfcwvt" path="res://models/kenney/kenney building/roof-flat-patch.glb" id="47_qaqp1"]
+[ext_resource type="PackedScene" uid="uid://d01rk2f2d3usv" path="res://models/kenney/kenney building/roof-flat-side.glb" id="48_nv47w"]
+[ext_resource type="PackedScene" uid="uid://b1mpgnijb62bx" path="res://models/kenney/kenney building/roof-flat-square.glb" id="49_dkjxd"]
+[ext_resource type="PackedScene" uid="uid://bctp0iejyr5gt" path="res://models/kenney/kenney building/stairs-center-short.glb" id="50_qciag"]
+[ext_resource type="PackedScene" uid="uid://4te7nrg3vbmp" path="res://models/kenney/kenney building/stairs-center.glb" id="51_fvje3"]
+[ext_resource type="PackedScene" uid="uid://c1aoof5gjmko5" path="res://models/kenney/kenney building/stairs-closed-short.glb" id="52_i4dex"]
+[ext_resource type="PackedScene" uid="uid://ci63mjlsb86jk" path="res://models/kenney/kenney building/stairs-closed.glb" id="53_g26n0"]
+[ext_resource type="PackedScene" uid="uid://dwrif7o710ilu" path="res://models/kenney/kenney building/stairs-open-short.glb" id="54_dkpq7"]
+[ext_resource type="PackedScene" uid="uid://cyicwr5ndpgbe" path="res://models/kenney/kenney building/stairs-open.glb" id="55_svf4i"]
+[ext_resource type="PackedScene" uid="uid://dfan76nqcm31o" path="res://models/kenney/kenney building/stairs-sides-short.glb" id="56_dq77a"]
+[ext_resource type="PackedScene" uid="uid://on23sg5fkg85" path="res://models/kenney/kenney building/stairs-sides.glb" id="57_t6m2b"]
+[ext_resource type="PackedScene" uid="uid://dmhwklppmar6g" path="res://models/kenney/kenney building/wall-corner-column-bottom.glb" id="58_hr2a5"]
+[ext_resource type="PackedScene" uid="uid://btii71ghicmyy" path="res://models/kenney/kenney building/wall-corner-column-small-bottom.glb" id="59_qrabr"]
+[ext_resource type="PackedScene" uid="uid://84utolarl088" path="res://models/kenney/kenney building/wall-corner-column-small.glb" id="60_3ck4p"]
+[ext_resource type="PackedScene" uid="uid://ceaujt4t8heig" path="res://models/kenney/kenney building/wall-corner-column.glb" id="61_o7gyq"]
+[ext_resource type="PackedScene" uid="uid://cuy2p1n6eraod" path="res://models/kenney/kenney building/wall-corner-diagonal.glb" id="62_d6wef"]
+[ext_resource type="PackedScene" uid="uid://c887vjkknw7jx" path="res://models/kenney/kenney building/wall-corner-round.glb" id="63_wku8n"]
+[ext_resource type="PackedScene" uid="uid://bvu5ilbojpibn" path="res://models/kenney/kenney building/wall-corner.glb" id="64_q4idp"]
+[ext_resource type="PackedScene" uid="uid://b07y744k5ffno" path="res://models/kenney/kenney building/wall-doorway-round.glb" id="65_v7x2p"]
+[ext_resource type="PackedScene" uid="uid://84fnoren4iky" path="res://models/kenney/kenney building/wall-doorway-square.glb" id="66_b8ai3"]
+[ext_resource type="PackedScene" uid="uid://x3c8roc3yvcs" path="res://models/kenney/kenney building/wall-doorway-wide-round.glb" id="67_tjele"]
+[ext_resource type="PackedScene" uid="uid://r1rxkbwoob3q" path="res://models/kenney/kenney building/wall-doorway-wide-square.glb" id="68_g2p3u"]
+[ext_resource type="PackedScene" uid="uid://d2y2l5ha207fa" path="res://models/kenney/kenney building/wall-half.glb" id="69_p2unq"]
+[ext_resource type="PackedScene" uid="uid://cey3gwtg1gos1" path="res://models/kenney/kenney building/wall-low.glb" id="70_ktwh2"]
+[ext_resource type="PackedScene" uid="uid://ddmtwojxcto75" path="res://models/kenney/kenney building/wall-window-round-detailed.glb" id="71_j1mfu"]
+[ext_resource type="PackedScene" uid="uid://csdu7syplefxu" path="res://models/kenney/kenney building/wall-window-round.glb" id="72_0pvme"]
+[ext_resource type="PackedScene" uid="uid://bp1eh1lpxitek" path="res://models/kenney/kenney building/wall-window-square-detailed.glb" id="73_rgeio"]
+[ext_resource type="PackedScene" uid="uid://ciwhpmjg1uake" path="res://models/kenney/kenney building/wall-window-square.glb" id="74_oe25a"]
+[ext_resource type="PackedScene" uid="uid://c8tbj58qmb4sf" path="res://models/kenney/kenney building/wall-window-wide-round-detailed.glb" id="75_x35lo"]
+[ext_resource type="PackedScene" uid="uid://5dp31w7qs1wo" path="res://models/kenney/kenney building/wall-window-wide-round.glb" id="76_v5pv0"]
+[ext_resource type="PackedScene" uid="uid://b4psn1mvsrmlt" path="res://models/kenney/kenney building/wall-window-wide-square-detailed.glb" id="77_xaemt"]
+[ext_resource type="PackedScene" uid="uid://svgecgbx0yut" path="res://models/kenney/kenney building/wall-window-wide-square.glb" id="78_gd6rd"]
+[ext_resource type="PackedScene" uid="uid://tr666uw7luex" path="res://models/kenney/kenney building/wall.glb" id="79_1ly2f"]
+
+[node name="Kenney Building Kit Library" type="Node3D"]
+
+[node name="barricade-doorway-a2" parent="." instance=ExtResource("1_u8ypq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="barricade-doorway-b2" parent="." instance=ExtResource("2_lobjo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="barricade-doorway-c2" parent="." instance=ExtResource("3_0i0im")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="barricade-window-a2" parent="." instance=ExtResource("4_dard1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="barricade-window-b2" parent="." instance=ExtResource("5_nld7a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="barricade-window-c2" parent="." instance=ExtResource("6_gertl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="border-corner-diagonal2" parent="." instance=ExtResource("7_v83jg")]
+
+[node name="border-corner-round2" parent="." instance=ExtResource("8_id254")]
+
+[node name="border-corner-small2" parent="." instance=ExtResource("9_05i5n")]
+
+[node name="border-corner2" parent="." instance=ExtResource("10_t0724")]
+
+[node name="border-high-corner-diagonal2" parent="." instance=ExtResource("11_76ook")]
+
+[node name="border-high-corner-round2" parent="." instance=ExtResource("12_rsceo")]
+
+[node name="border-high-corner-small2" parent="." instance=ExtResource("13_dyyc3")]
+
+[node name="border-high-corner2" parent="." instance=ExtResource("14_jph57")]
+
+[node name="border-high2" parent="." instance=ExtResource("15_poh84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="border2" parent="." instance=ExtResource("16_4qylr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="column-thin2" parent="." instance=ExtResource("17_oh36c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="column-wide2" parent="." instance=ExtResource("18_kxy0l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13)
+
+[node name="column2" parent="." instance=ExtResource("19_iemsi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="detail-pipe2" parent="." instance=ExtResource("20_oxjne")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="door-rotate-round-a2" parent="." instance=ExtResource("21_omy77")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="door-rotate-round-b2" parent="." instance=ExtResource("22_xusor")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="door-rotate-round-c2" parent="." instance=ExtResource("23_ix0bk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="door-rotate-round-d2" parent="." instance=ExtResource("24_u25tg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="door-rotate-square-a2" parent="." instance=ExtResource("25_f44ml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="door-rotate-square-b2" parent="." instance=ExtResource("26_s8g7b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="door-rotate-square-c2" parent="." instance=ExtResource("27_5mdoi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="door-rotate-square-d2" parent="." instance=ExtResource("28_rg5a7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="floor-corner-diagonal2" parent="." instance=ExtResource("29_i5s3n")]
+
+[node name="floor-corner-round2" parent="." instance=ExtResource("30_sv24o")]
+
+[node name="floor-half2" parent="." instance=ExtResource("31_30yov")]
+
+[node name="floor-quarter2" parent="." instance=ExtResource("32_ok55s")]
+
+[node name="floor2" parent="." instance=ExtResource("33_81xr3")]
+
+[node name="gutter-vertical-bottom2" parent="." instance=ExtResource("34_p760k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="gutter-vertical-short2" parent="." instance=ExtResource("35_ru4q0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="gutter-vertical-top2" parent="." instance=ExtResource("36_wlagn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="gutter-vertical-wall2" parent="." instance=ExtResource("37_pos0j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="gutter-vertical2" parent="." instance=ExtResource("38_onotx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="plating-detailed-wide2" parent="." instance=ExtResource("39_yhpra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7)
+
+[node name="plating-detailed2" parent="." instance=ExtResource("40_v2325")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="plating-wide2" parent="." instance=ExtResource("41_e0kqw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7)
+
+[node name="plating2" parent="." instance=ExtResource("42_5olya")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="roof-flat-center2" parent="." instance=ExtResource("43_odjpp")]
+
+[node name="roof-flat-corner-inner2" parent="." instance=ExtResource("44_xylfm")]
+
+[node name="roof-flat-corner2" parent="." instance=ExtResource("45_85k7k")]
+
+[node name="roof-flat-patch-large2" parent="." instance=ExtResource("46_d7ltw")]
+
+[node name="roof-flat-patch2" parent="." instance=ExtResource("47_qaqp1")]
+
+[node name="roof-flat-side2" parent="." instance=ExtResource("48_nv47w")]
+
+[node name="roof-flat-square2" parent="." instance=ExtResource("49_dkjxd")]
+
+[node name="stairs-center-short2" parent="." instance=ExtResource("50_qciag")]
+
+[node name="stairs-center2" parent="." instance=ExtResource("51_fvje3")]
+
+[node name="stairs-closed-short2" parent="." instance=ExtResource("52_i4dex")]
+
+[node name="stairs-closed2" parent="." instance=ExtResource("53_g26n0")]
+
+[node name="stairs-open-short2" parent="." instance=ExtResource("54_dkpq7")]
+
+[node name="stairs-open2" parent="." instance=ExtResource("55_svf4i")]
+
+[node name="stairs-sides-short2" parent="." instance=ExtResource("56_dq77a")]
+
+[node name="stairs-sides2" parent="." instance=ExtResource("57_t6m2b")]
+
+[node name="wall-corner-column-bottom2" parent="." instance=ExtResource("58_hr2a5")]
+
+[node name="wall-corner-column-small-bottom2" parent="." instance=ExtResource("59_qrabr")]
+
+[node name="wall-corner-column-small2" parent="." instance=ExtResource("60_3ck4p")]
+
+[node name="wall-corner-column2" parent="." instance=ExtResource("61_o7gyq")]
+
+[node name="wall-corner-diagonal2" parent="." instance=ExtResource("62_d6wef")]
+
+[node name="wall-corner-round2" parent="." instance=ExtResource("63_wku8n")]
+
+[node name="wall-corner2" parent="." instance=ExtResource("64_q4idp")]
+
+[node name="wall-doorway-round2" parent="." instance=ExtResource("65_v7x2p")]
+
+[node name="wall-doorway-square2" parent="." instance=ExtResource("66_b8ai3")]
+
+[node name="wall-doorway-wide-round2" parent="." instance=ExtResource("67_tjele")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7)
+
+[node name="wall-doorway-wide-square2" parent="." instance=ExtResource("68_g2p3u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7)
+
+[node name="wall-doorway-wide-square" parent="wall-doorway-wide-square2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="wall-half2" parent="." instance=ExtResource("69_p2unq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="wall-low2" parent="." instance=ExtResource("70_ktwh2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="wall-window-round-detailed2" parent="." instance=ExtResource("71_j1mfu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="wall-window-round2" parent="." instance=ExtResource("72_0pvme")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="wall-window-square-detailed2" parent="." instance=ExtResource("73_rgeio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="wall-window-square2" parent="." instance=ExtResource("74_oe25a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="wall-window-wide-round-detailed2" parent="." instance=ExtResource("75_x35lo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7)
+
+[node name="wall-window-wide-round2" parent="." instance=ExtResource("76_v5pv0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7)
+
+[node name="wall-window-wide-round" parent="wall-window-wide-round2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="wall-window-wide-square-detailed2" parent="." instance=ExtResource("77_xaemt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7)
+
+[node name="wall-window-wide-square2" parent="." instance=ExtResource("78_gd6rd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7)
+
+[node name="wall2" parent="." instance=ExtResource("79_1ly2f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[editable path="wall-doorway-wide-square2"]
+[editable path="wall-window-wide-round2"]

@@ -1,10 +1,13 @@
-[gd_scene load_steps=25 format=3 uid="uid://cc1m2a1obsyn4"]
+[gd_scene load_steps=28 format=3 uid="uid://cc1m2a1obsyn4"]
 
 [ext_resource type="Script" path="res://addons/fpc/character.gd" id="1_0t4e8"]
 [ext_resource type="Script" path="res://addons/fpc/Interactor.gd" id="2_sgdg4"]
-[ext_resource type="PackedScene" uid="uid://cag4g727ej5by" path="res://fishing_rod.tscn" id="3_f0f46"]
+[ext_resource type="Script" path="res://addons/fpc/Attacker.gd" id="3_wbqpg"]
 [ext_resource type="Script" path="res://addons/fpc/debug.gd" id="3_x1wcc"]
 [ext_resource type="Script" path="res://addons/fpc/Kicker.gd" id="4_gs4aj"]
+[ext_resource type="Script" path="res://addons/fpc/Builder.gd" id="5_0e2f5"]
+[ext_resource type="Material" uid="uid://cnyxfmklf1u0" path="res://hologram.material" id="5_i3dnw"]
+[ext_resource type="PackedScene" uid="uid://de13fp1devls0" path="res://models/kenney/kenney blaster/blasterD.glb" id="6_2ebxr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kp17n"]
 albedo_color = Color(0.909804, 0.596078, 0, 1)
@@ -394,7 +397,7 @@ MarginContainer/constants/margin_top = 10
 height = 0.723662
 radius = 0.403367
 
-[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("HEAD", "CAMERA", "HEADBOB_ANIMATION", "JUMP_ANIMATION", "CROUCH_ANIMATION", "COLLISION_MESH", "INTERACTOR")]
+[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("HEAD", "CAMERA", "HEADBOB_ANIMATION", "JUMP_ANIMATION", "CROUCH_ANIMATION", "COLLISION_MESH", "INTERACTOR") groups=["players"]]
 collision_layer = 8
 collision_mask = 33
 script = ExtResource("1_0t4e8")
@@ -437,7 +440,7 @@ transform = Transform3D(1, 0, 0, 0, 0.999391, -0.0348995, 0, 0.0348995, 0.999391
 libraries = {
 "": SubResource("AnimationLibrary_o0unb")
 }
-blend_times = [&"walk", &"RESET", 0.5, &"RESET", &"walk", 0.5, &"RESET", &"RESET", 0.5]
+blend_times = [&"RESET", &"RESET", 0.5, &"RESET", &"walk", 0.5, &"walk", &"RESET", 0.5]
 
 [node name="JumpAnimation" type="AnimationPlayer" parent="Head"]
 libraries = {
@@ -449,6 +452,8 @@ speed_scale = 4.0
 target_position = Vector3(0, 0, -2.5)
 collision_mask = 2
 collide_with_areas = true
+debug_shape_custom_color = Color(1, 0.525758, 0.72588, 1)
+debug_shape_thickness = 3
 script = ExtResource("2_sgdg4")
 pull_curve = SubResource("Curve_b103g")
 grab_layer = 4
@@ -461,10 +466,26 @@ CAMERA = NodePath("../Camera")
 [node name="Holder" type="Node3D" parent="Head/Interactor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.99133)
 
-[node name="Hand" type="Node3D" parent="Head"]
-transform = Transform3D(1, 0, 0, 0, 0.357537, -0.933899, 0, 0.933899, 0.357537, 0.821295, -0.252416, -1.08989)
+[node name="Attacker" type="RayCast3D" parent="Head"]
+target_position = Vector3(0, 0, -100)
+collision_mask = 769
+collide_with_areas = true
+debug_shape_custom_color = Color(0.803922, 0.305882, 0.411765, 1)
+debug_shape_thickness = 1
+script = ExtResource("3_wbqpg")
 
-[node name="fishing_rod" parent="Head/Hand" instance=ExtResource("3_f0f46")]
+[node name="Builder" type="RayCast3D" parent="Head"]
+target_position = Vector3(0, 0, -5)
+collision_mask = 4096
+collide_with_areas = true
+debug_shape_custom_color = Color(0.282353, 0.631373, 0.411765, 1)
+script = ExtResource("5_0e2f5")
+holo_material = ExtResource("5_i3dnw")
+
+[node name="Hand" type="Node3D" parent="Head"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.681, -0.402, -1.125)
+
+[node name="blasterD2" parent="Head/Hand" instance=ExtResource("6_2ebxr")]
 
 [node name="UserInterface" type="Control" parent="."]
 layout_mode = 3

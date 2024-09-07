@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://d05e26570vcr0"]
+
+[ext_resource type="PackedScene" uid="uid://d0ea3y0ur8au5" path="res://models/kenney/kenney furniture/bathtub.glb" id="1_1otbt"]
+[ext_resource type="Material" uid="uid://cnyxfmklf1u0" path="res://hologram.material" id="2_npfco"]
+
+[node name="bathtub" instance=ExtResource("1_1otbt")]
+
+[node name="bathtub(Clone)" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_npfco")
+surface_material_override/1 = ExtResource("2_npfco")
+surface_material_override/2 = ExtResource("2_npfco")

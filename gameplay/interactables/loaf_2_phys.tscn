@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhsswgx08h65v"]
+
+[ext_resource type="PackedScene" uid="uid://bxe508w1cb6y1" path="res://models/kenney/kenney food/loaf.glb" id="1_qmn11"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xpu45"]
+size = Vector3(0.595703, 0.464813, 0.386719)
+
+[node name="Loaf2 Phys" type="RigidBody3D"]
+collision_layer = 2
+collision_mask = 3
+can_sleep = false
+continuous_cd = true
+
+[node name="loaf2" parent="." instance=ExtResource("1_qmn11")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.227493, 0)
+shape = SubResource("BoxShape3D_xpu45")
